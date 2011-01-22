@@ -1,3 +1,5 @@
+set nostrictfocus
+
 " Gmail
 set passkeys+='https://mail\.google\.com/':xsem!#rRaAvN[]{}z.IU=-gidac/?lujkonp
 
@@ -9,3 +11,6 @@ nnoremap i :bmarks instapaper<Tab><Return>;o
 
 " Toolbar and tab numbers
 set guioptions+=Tn
+
+" No status bar
+set guioptions-=s
