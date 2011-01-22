@@ -1,0 +1,11 @@
+" Gmail
+set passkeys+='https://mail\.google\.com/':xsem!#rRaAvN[]{}z.IU=-gidac/?lujkonp
+
+" Google Reader
+set passkeys+='https://www\.google\.com\/reader':nplmsSt
+
+" Instapaper
+nnoremap i :bmarks instapaper<Tab><Return>;o
+
+" Toolbar and tab numbers
+set guioptions+=Tn
