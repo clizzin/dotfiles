@@ -4,7 +4,7 @@ set nostrictfocus
 set passkeys+='https://mail\.google\.com/':xsem!#rRaAvN[]{}z.IU=-gidac/?lujkonp
 
 " Google Reader
-set passkeys+='https://www\.google\.com\/reader':nplmsSt
+set passkeys+='https://www\.google\.com\/reader':ojknplmsSt
 
 " Instapaper
 nnoremap i :bmarks instapaper<Tab><Return>;o
