@@ -8,7 +8,7 @@ set ruler
 syntax on
 filetype plugin indent on
 
-" Use four places instead of tabs
+" Use four spaces instead of tabs
 set tabstop=4
 set shiftwidth=4
 set expandtab
