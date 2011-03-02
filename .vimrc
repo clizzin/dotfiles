@@ -21,6 +21,10 @@ set smartindent
 set incsearch
 set hlsearch
 
+" Viewports
+set splitright
+set splitbelow
+
 " Prettiness
 if has("gui_running")
     set guioptions-=T
