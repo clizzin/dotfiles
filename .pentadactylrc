@@ -1,10 +1,14 @@
 set nostrictfocus
 
 " Gmail
-set passkeys+='https://mail\.google\.com/':xsem!#rRaAvN[]{}z.IU=-gidac/?lujkonp
+set passkeys+='https://mail\.google\.com/':xsem!#rRaAvN[]{}z.IU=-giac/?lujkonp
 
 " Google Reader
-set passkeys+='https://www\.google\.com\/reader':ojknplmsSt
+set passkeys+='https://www\.google\.com\/reader':ojknplmsStOJKgut
+
+" Facebook Photos
+set passkeys+='http://www\.facebook\.com\/photo.php':<Left><Right>
+set passkeys+='https://www\.facebook\.com\/photo.php':<Left><Right>
 
 " Instapaper
 nnoremap i :bmarks instapaper<Tab><Return>;o
