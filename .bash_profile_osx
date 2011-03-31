@@ -12,6 +12,9 @@ export PATH=/usr/local/bin:$PATH                    # Homebrew binaries
 # Colors
 alias ls='ls -G'
 
+# less with Vim settings
+alias vless=/usr/share/vim/vim72/macros/less.sh
+
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_OPTS=-Xmx2048m
