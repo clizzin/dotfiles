@@ -1,5 +1,5 @@
 # Git branch prompt completion
-. /usr/local/Cellar/git/1.7.3.1/etc/bash_completion.d/git-completion.bash
+. /usr/local/Cellar/git/1.7.4.3/etc/bash_completion.d/git-completion.bash
 
 # Bash prompt
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
