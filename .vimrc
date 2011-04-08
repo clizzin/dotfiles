@@ -28,8 +28,8 @@ set splitbelow
 " Prettiness
 if has("gui_running")
     set guioptions-=T
-    " colo slate
-    colo underwater-mod
+    colo slate
+    " colo underwater-mod
     hi CursorLine guibg=darkred
 endif
 
