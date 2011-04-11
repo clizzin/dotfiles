@@ -6,10 +6,9 @@
 export PS1="\[\033[01;32m\]\w\$(__git_ps1) \[\033[00m\]$ "
 
 # Add higher-priority binaries to PATH
-export PATH=/Users/clizzin/code/leiningen/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH    # MacPorts
+export PATH=/usr/local/mysql/bin:$PATH              # MySQL
 export PATH=/usr/local/bin:$PATH                    # Homebrew binaries
+# export PATH=/opt/local/bin:/opt/local/sbin:$PATH  # MacPorts
 
 # Make the Ruby MySQL gem work
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
@@ -36,9 +35,6 @@ export PATH=$PATH:$HADOOP_INSTALL/bin
 
 # Amazon Elastic MapReduce Ruby client
 # export PATH=$PATH:/Users/clizzin/code/elastic-mapreduce-ruby
-
-# Amazon S3cmd
-# export PATH=$PATH:/Users/clizzin/code/s3cmd-1.0.0-rc1
 
 # Nutch
 # export NUTCH_HOME=/Users/clizzin/code/apache-nutch-1.1
