@@ -7,8 +7,12 @@ export PS1="\[\033[01;32m\]\w\$(__git_ps1) \[\033[00m\]$ "
 
 # Add higher-priority binaries to PATH
 export PATH=/Users/clizzin/code/leiningen/bin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH    # MacPorts
 export PATH=/usr/local/bin:$PATH                    # Homebrew binaries
+
+# Make the Ruby MySQL gem work
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
 
 # Colors
 alias ls='ls -G'
