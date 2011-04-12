@@ -26,6 +26,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_OPTS=-Xmx2048m
 
 # Hadoop
+alias haddop='hadoop'   # I make this goddamn typo all the time
 export HADOOP_INSTALL=$CODE_HOME/hadoop-0.20.2-CDH3B4
 export HADOOP_HOME=$HADOOP_INSTALL
 export PATH=$PATH:$HADOOP_INSTALL/bin
