@@ -19,15 +19,21 @@ alias ls='ls -G'
 # less with Vim settings
 alias vless=/usr/share/vim/vim72/macros/less.sh
 
+export CODE_HOME=/Users/clizzin/code
+
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_OPTS=-Xmx2048m
 
 # Hadoop
-export HADOOP_INSTALL=/Users/clizzin/code/hadoop-0.20.2-CDH3B4
+export HADOOP_INSTALL=$CODE_HOME/hadoop-0.20.2-CDH3B4
 export HADOOP_HOME=$HADOOP_INSTALL
 export PATH=$PATH:$HADOOP_INSTALL/bin
 # export HBASE_HOME=/Users/clizzin/code/hbase-0.89.20100924+28
+
+# Hive
+export HIVE_HOME=$CODE_HOME/hive-0.7.0-CDH3B4
+export PATH=$PATH:$HIVE_HOME/bin
 
 # Mahout
 # export MAHOUT_HOME=/Users/clizzin/code/mahout-distribution-0.4  # 0.4 release
