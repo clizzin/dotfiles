@@ -25,6 +25,10 @@ set hlsearch
 set splitright
 set splitbelow
 
+" NERDTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
 " Prettiness
 if has("gui_running")
     set guioptions-=T
