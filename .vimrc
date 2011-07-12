@@ -8,14 +8,15 @@ set ruler
 syntax on
 filetype plugin indent on
 
-" Use four spaces instead of tabs
+" Defaults
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" Indent
 set autoindent
 set smartindent
+
+" Ruby
+autocmd FileType ruby set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
 
 " Search
 set incsearch
