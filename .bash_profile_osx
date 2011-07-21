@@ -3,7 +3,7 @@
 
 # Bash prompt
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
-export PS1="\[\033[01;32m\]\w\$(__git_ps1) \[\033[00m\]$ "
+export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]$ "
 
 # Add higher-priority binaries to PATH
 export PATH=/usr/local/mysql/bin:$PATH              # MySQL
