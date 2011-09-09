@@ -14,13 +14,14 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+set iskeyword-=_
 
 " Ruby
 autocmd FileType ruby set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
 
 " Search
 set incsearch
-set hlsearch
+set nohlsearch
 
 " Viewports
 set splitright
