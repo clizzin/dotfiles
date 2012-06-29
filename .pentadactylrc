@@ -17,4 +17,4 @@ nnoremap i :bmarks instapaper<Tab><Return>;o
 set guioptions+=Tn
 
 " No status bar
-set guioptions+=s
+set guioptions+=sB
