@@ -1,5 +1,5 @@
 # Git branch prompt completion
-. /usr/local/Cellar/git/1.7.4.3/etc/bash_completion.d/git-completion.bash
+. /usr/local/etc/bash_completion.d/git-completion.bash
 
 # Bash prompt
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
@@ -14,7 +14,12 @@ export PATH=/usr/local/bin:$PATH                    # Homebrew binaries
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
 
 # Colors
-alias ls='ls -G'
+alias ls='ls -lG'
+alias be='bundle exec'
+alias ber='bundle exec rake'
+alias gp='git pull && git pull --rebase'
+alias gpo='git push origin'
+alias gpom='git push origin master'
 
 # less with Vim settings
 alias vless=/usr/share/vim/vim72/macros/less.sh
@@ -49,3 +54,4 @@ export PATH=$PATH:$HIVE_HOME/bin
 
 # Loads RVM into a shell session
 [[ -s "/Users/clizzin/.rvm/scripts/rvm" ]] && source "/Users/clizzin/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
