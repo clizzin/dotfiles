@@ -22,9 +22,30 @@ alias ls='ls -lG' # colors + always use the long format
 alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
+
+# Git aliases
+
+alias ga='git add'
+alias gap='git add -p'
+
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias gca='git commit --amend'
+
+alias gd='git diff'
+alias gdc='git diff --cached'
+
+alias gl='git log'
+alias glp='git log -p'
+
 alias gp='git pull && git pull --rebase'
+
 alias gpo='git push origin'
 alias gpom='git push origin master'
+
+alias grh='git reset HEAD'
+
 alias gs='git status'
 
 # Python virtualenvwrapper
