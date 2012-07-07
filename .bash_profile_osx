@@ -49,8 +49,8 @@ alias grh='git reset HEAD'
 alias gs='git status'
 
 # Python virtualenvwrapper
-export WORKON_HOME=$HOME/virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=$HOME/virtualenvs
+# source /usr/local/bin/virtualenvwrapper.sh
 # workon analytics
 
 export CODE_HOME=/Users/clizzin/code
