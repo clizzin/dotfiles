@@ -26,37 +26,57 @@ alias ber='bundle exec rake'
 # Git aliases
 alias g='git'
 
-alias ga='git add'
-alias gap='git add -p'
+alias gs='git status'                    # See a summary of which changes are staged for a commit (the top green section), which are modified
+                                         #   on disk but not staged for a commit (the middle red section, "Changes not staged for commit"), and
+                                         #   which are not yet tracked by the repo and need to be `git add`-ed (the bottom red section, "Untracked
+                                         #   files").
 
-alias gb='git branch'
-alias gbd='git branch -d'
+alias ga='git add'                       # Add a file to the "stage" of changes that will be committed if you run `git commit` (i.e. move the file
+                                         #   from the middle/bottom red sections to the top green section).
+alias gap='git add -p'                   # Add a file to the "stage," but instead of adding the whole file at once, git will detect sections
+                                         #   of changes, and for each section, will ask you if you want to add it or not.  Useful for when
+                                         #   you've changed the same file for two different logical tasks, but only want to commit the changes
+                                         #   related to one task.
 
-alias gco='git checkout'
-alias gcob='git checkout -b'
+alias gd='git diff'                      # Show the diff between the last commit and the new changes that you have not yet `git add`-ed.
+                                         #   i.e. You know the middle red section of `git status` output?  `git diff` shows those changes.
+alias gdc='git diff --cached'            # Show the diff of what would be committed if you were to run `git commit` right now.
+                                         #   i.e. You know the top green section of `git status` output?  `git diff --cached` shows those changes.
 
 alias gc='git commit'
-alias gcm='git commit -m'
-alias gcam='git commit -am'
-alias gca='git commit --amend'
-alias gcaa='git commit -a --amend'
+alias gcm='git commit -m'                # Commit with a message, e.g. `git commit -m "Implemented a new feature."`.
+alias gcam='git commit -am'              # The `-a` flag automatically stages all changes (i.e. the middle red section of `git status` automatically
+                                         #   gets treated as if they were in the top green section).  Useful for when you quickly want to commit
+                                         #   all the changes you've made without having to `git add` every single file.  Also useful for when you've
+                                         #   deleted a file and want to commit that deletion.
+alias gca='git commit --amend'           # Revise the last commit.  Useful if you made a typo in the commit message.  If you made some extra changes
+                                         #   that should logically get lumped into the last commit, you can `git add -p` those changes and then run
+                                         #   `git commit --amend` to lump them into the last commit.
+alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.  (Literally combines the effects
+                                         #   of `-a` and `--amend`.
 
-alias gd='git diff'
-alias gdc='git diff --cached'
+alias gp='git pull && git pull --rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
+                                         #   get automatically generated.  So we then also rebase locally to get rid of that ugly "Merge" commit.
 
-alias gl='git log'
-alias glp='git log -p'
+alias gpom='git push origin master'      # Push to origin/master.  The most common case for pushing to origin.
+alias gpo='git push origin'              # Push to origin.  Use this with a branch name, e.g. `gpo my-branch`.
 
-alias gp='git pull && git pull --rebase'
+alias gb='git branch'                    # List your local branches.
+alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d branch-to-delete`.
 
-alias gpo='git push origin'
-alias gpom='git push origin master'
+alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
+                                         #   with the files as they exist on that branch.
+alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new
+                                         #   branch will "fork" off whatever the current commit is at the time you run `git checkout -b`.
+
+alias gl='git log'                       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
+alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
 
 alias gr='git reset'
 alias grh='git reset HEAD'
-alias grh1='git reset HEAD~1'
+alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
+                                         # on disk, it will just 
 
-alias gs='git status'
 
 # Python virtualenvwrapper
 # export WORKON_HOME=$HOME/virtualenvs
