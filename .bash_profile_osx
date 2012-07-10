@@ -24,14 +24,22 @@ alias be='bundle exec'
 alias ber='bundle exec rake'
 
 # Git aliases
+alias g='git'
 
 alias ga='git add'
 alias gap='git add -p'
+
+alias gb='git branch'
+alias gbd='git branch -d'
+
+alias gco='git checkout'
+alias gcob='git checkout -b'
 
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gca='git commit --amend'
+alias gcaa='git commit -a --amend'
 
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -44,7 +52,9 @@ alias gp='git pull && git pull --rebase'
 alias gpo='git push origin'
 alias gpom='git push origin master'
 
+alias gr='git reset'
 alias grh='git reset HEAD'
+alias grh1='git reset HEAD~1'
 
 alias gs='git status'
 
