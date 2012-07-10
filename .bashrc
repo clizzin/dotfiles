@@ -75,7 +75,8 @@ alias glp='git log -p'                   # Show the history of commits, plus sho
 alias gr='git reset'
 alias grh='git reset HEAD'
 alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
-                                         # on disk, it will just 
+                                         #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
+                                         #  changes (i.e. the middle red secton of `git status`).
 
 
 # Python virtualenvwrapper
