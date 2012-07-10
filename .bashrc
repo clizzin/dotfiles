@@ -44,7 +44,8 @@ alias gdc='git diff --cached'            # Show the diff of what would be commit
                                          #   i.e. You know the top green section of `git status` output?  `git diff --cached` shows those changes.
 
 alias gc='git commit'
-alias gcm='git commit -m'                # Commit with a message, e.g. `git commit -m "Implemented a new feature."`.
+alias gcm='git commit -m'                # Commit with a message, e.g. `git commit -m "Implemented a new feature."`.  The most common command you'll
+                                         #   use when committing.
 alias gcam='git commit -am'              # The `-a` flag automatically stages all changes (i.e. the middle red section of `git status` automatically
                                          #   gets treated as if they were in the top green section).  Useful for when you quickly want to commit
                                          #   all the changes you've made without having to `git add` every single file.  Also useful for when you've
@@ -54,6 +55,9 @@ alias gca='git commit --amend'           # Revise the last commit.  Useful if yo
                                          #   `git commit --amend` to lump them into the last commit.
 alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.  (Literally combines the effects
                                          #   of `-a` and `--amend`.
+
+alias gl='git log'                       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
+alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
 
 alias gp='git pull && git pull --rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
                                          #   get automatically generated.  So we then also rebase locally to get rid of that ugly "Merge" commit.
@@ -66,17 +70,15 @@ alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d 
 
 alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
                                          #   with the files as they exist on that branch.
-alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new
-                                         #   branch will "fork" off whatever the current commit is at the time you run `git checkout -b`.
-
-alias gl='git log'                       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
-alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
+alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new branch will
+                                         #   "fork" off whatever the current commit is at the time you run `git checkout -b`.
 
 alias gr='git reset'
 alias grh='git reset HEAD'
 alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
                                          #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
-                                         #  changes (i.e. the middle red secton of `git status`).
+                                         #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
+                                         #  last commit, do `git reset --hard HEAD~1`.
 
 
 # Python virtualenvwrapper
