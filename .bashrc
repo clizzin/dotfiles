@@ -169,10 +169,13 @@ PATH=$PATH:$HOME/.rvm/bin
 # Loads Pythonbrew into a shell session
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
-# AWS EC2 Tools
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.2.4/jars"
+# AWS EC2 API Tools
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 export EC2_CERT="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+
+# AWS EC2 AMI Tools
+export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
 
 # AWS admin
 export EC2_CERT="$(/bin/ls $HOME/.ec2/pk-*.pem)"
