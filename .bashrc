@@ -5,18 +5,6 @@
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
 export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]$ "
 
-# Don't use the Apple LLVM GCC
-export CC=gcc-4.2
-export CXX=g++-4.2
-
-# Make the Ruby MySQL gem work
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
-
-# Ruby GC settings
-export RUBY_HEAP_MIN_SLOTS=600000
-export RUBY_GC_MALLOC_LIMIT=59000000
-export RUBY_HEAP_FREE_MIN=100000
-
 # Common aliases
 alias ls='ls -lG' # colors + always use the long format
 alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
@@ -80,13 +68,31 @@ alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't h
                                          #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
                                          #  last commit, do `git reset --hard HEAD~1`.
 
+export CODE_HOME=/Users/clizzin/code
+
+
+##############################################################
+#                                                            #
+# EVERYTHING BELOW THIS LINE IS SPECIFIC TO MY AIRBNB LAPTOP #
+#                                                            #
+##############################################################
+
+# Don't use the Apple LLVM GCC
+export CC=gcc-4.2
+export CXX=g++-4.2
+
+# Make the Ruby MySQL gem work
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
+
+# Ruby GC settings
+export RUBY_HEAP_MIN_SLOTS=600000
+export RUBY_GC_MALLOC_LIMIT=59000000
+export RUBY_HEAP_FREE_MIN=100000
 
 # Python virtualenvwrapper
 # export WORKON_HOME=$HOME/virtualenvs
 # source /usr/local/bin/virtualenvwrapper.sh
 # workon analytics
-
-export CODE_HOME=/Users/clizzin/code
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
