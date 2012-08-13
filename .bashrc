@@ -113,52 +113,14 @@ export HADOOP_LZO_HOME=/Users/clizzin/code/hadoop-lzo
 export HADOOP_CLASSPATH=$HADOOP_LZO_HOME/build/hadoop-lzo-0.4.10.jar:$HADOOP_HOME:$HADOOP_HOME/lib
 export JAVA_LIBRARY_PATH=$HADOOP_LZO_HOME/build/hadoop-lzo-0.4.10/lib/native/Mac_OS_X-x86_64-64:$HADOOP_HOME/build/lib/native/Linux-amd64-64
 
-# HBase
-# export HBASE_INSTALL=$CODE_HOME/hbase-0.90.1-cdh3u0
-# export HBASE_HOME=$HBASE_INSTALL
-# export PATH=$HBASE_INSTALL/bin:$PATH
-
-# Whirr
-# export WHIRR_INSTALL=$CODE_HOME/whirr-0.5.0-incubating
-# export PATH=$WHIRR_INSTALL/bin:$PATH
-# export PATH=$WHIRR_INSTALL/contrib/python/src/py:$PATH
-# alias whirr-hadoop='HADOOP_CONF_DIR=~/.whirr/hadoop hadoop'
-
-# Pig
-# export PIG_INSTALL=$CODE_HOME/pig-0.8.0-cdh3u0
-# export PIG_HOME=$PIG_INSTALL
-# export PATH=$PIG_HOME/bin:$PATH
-
 # Hive
 export HIVE_INSTALL=$CODE_HOME/hive-0.7.1-cdh3u2
 export HIVE_HOME=$HIVE_INSTALL
 export PATH=$HIVE_HOME/bin:$PATH
 
-# Flume
-# export FLUME_HOME=$CODE_HOME/flume-0.9.3-cdh3u0
-# export FLUME_CONF_DIR=$FLUME_HOME/conf
-# export PATH=$FLUME_HOME/bin:$PATH
-
-# ZooKeeper
-# export ZOOKEEPER_INSTALL=$CODE_HOME/zookeeper-3.3.3-cdh3u0
-# export ZOOKEEPER_HOME=$ZOOKEEPER_INSTALL
-# export PATH=$ZOOKEEPER_INSTALL/bin:$PATH
-
-# Sqoop
-# export SQOOP_HOME=$CODE_HOME/sqoop-1.3.0
-# export PATH=$SQOOP_HOME/bin:$PATH
-
-# Mahout
-# export MAHOUT_HOME=/Users/clizzin/code/mahout-distribution-0.4  # 0.4 release
-# export PATH=$PATH:$MAHOUT_HOME/bin
-
 # Amazon Elastic MapReduce Ruby client
 export PATH=$CODE_HOME/elastic-mapreduce-ruby:$PATH
 alias emr=elastic-mapreduce
-
-# Nutch
-# export NUTCH_HOME=/Users/clizzin/code/apache-nutch-1.1
-# export PATH=$PATH:$NUTCH_HOME/bin
 
 # Node.js (via Homebrew)
 NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
