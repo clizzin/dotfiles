@@ -6,6 +6,10 @@
 --type-add=css=.sass,.scss
 --type-add=js=.coffee
 
+# Hive QL files
+--type-set=hql=.ql
+--type-add=hql=.hql
+
 # Ignore a bunch of directories that have lots of noise.
 --ignore-dir=public/ext
 --ignore-dir=public/images
