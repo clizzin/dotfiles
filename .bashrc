@@ -52,6 +52,7 @@ alias gcaa='git commit -a --amend'       # Revise the last commit by automatical
 
 alias gl='git log'                       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
 alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
+alias glno='git log --name-only'         # Show the history of commits, plus show the filenames changed for each commit.
 
 alias gp='git pull && git pull --rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
                                          #   get automatically generated.  So we then also rebase locally to get rid of that ugly "Merge" commit.
