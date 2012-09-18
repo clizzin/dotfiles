@@ -2,6 +2,7 @@
 . /usr/local/etc/bash_completion.d/git-completion.bash
 
 # Bash prompt
+. /usr/local/etc/bash_completion.d/git-prompt.sh
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
 export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]$ "
 
