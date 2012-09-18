@@ -131,7 +131,8 @@ export PATH=$CODE_HOME/elastic-mapreduce-ruby:$PATH
 alias emr=elastic-mapreduce
 
 # Node.js (via Homebrew)
-NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:/usr/local/share/npm/bin
+export PATH=$NODE_PATH:$PATH
 
 # OpenCV
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
