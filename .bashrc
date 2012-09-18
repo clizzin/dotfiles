@@ -85,6 +85,9 @@ export CODE_HOME=/Users/clizzin/code
 #                                                            #
 ##############################################################
 
+alias start='/usr/local/nginx/sbin/nginx'
+alias stop='kill `cat /usr/local/nginx/logs/nginx.pid`'
+
 # Don't use the Apple LLVM GCC
 export CC=gcc-4.2
 export CXX=g++-4.2
