@@ -13,10 +13,10 @@ alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
 
-# Aliases for GNU coreutils
+# Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
 # If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
-alias zcat='gzcat'
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Git aliases
 alias g='git'
