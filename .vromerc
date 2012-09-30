@@ -1,0 +1,6 @@
+" Change key mapping in normal mode, please check Vrome Features for available key mapping
+map j 2j
+map k 2k
+
+" Disable Vrome in those sites, Multiple URLs can be separated with ‘,’
+set disablesites=mail.google.com, reader.google.com // don’t run Vrome in those sites
