@@ -11,9 +11,11 @@
 --type-add=hql=.hql
 
 # Ignore a bunch of directories that have lots of noise.
+--ignore-dir=coverage
 --ignore-dir=public/ext
 --ignore-dir=public/images
 --ignore-dir=public/assets
+--ignore-dir=tmp/capybara
 --ignore-dir=tmp/emails
 --ignore-dir=log
 --ignore-dir=tiny_mce
