@@ -159,7 +159,7 @@ export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
 
 # AWS admin
-export EC2_CERT="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 
 export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.15.1/jars"
