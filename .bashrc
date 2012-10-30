@@ -12,6 +12,7 @@ alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show 
 alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
+alias rc='bundle exec rails console'
 
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
