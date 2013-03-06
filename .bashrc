@@ -67,6 +67,7 @@ alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d 
 
 alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
                                          #   with the files as they exist on that branch.
+alias gcom='git checkout master'         # Checkout the master branch.
 alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new branch will
                                          #   "fork" off whatever the current commit is at the time you run `git checkout -b`.
 
@@ -76,6 +77,7 @@ alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't h
                                          #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
                                          #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
                                          #  last commit, do `git reset --hard HEAD~1`.
+alias gcp='git cherry-pick'
 
 export CODE_HOME=/Users/clizzin/code
 
