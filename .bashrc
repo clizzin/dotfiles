@@ -56,7 +56,7 @@ alias gl='git log'                       # Show the history of commits.  This wi
 alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
 alias glno='git log --name-only'         # Show the history of commits, plus show the filenames changed for each commit.
 
-alias gp='git pull && git pull --rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
+alias gp='git pull --no-edit && git pull --rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
                                          #   get automatically generated.  So we then also rebase locally to get rid of that ugly "Merge" commit.
 
 alias gpom='git push origin master'      # Push to origin/master.  The most common case for pushing to origin.
