@@ -57,9 +57,19 @@ alias gca='git commit --amend'           # Revise the last commit.  Useful if yo
 alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.  (Literally combines the effects
                                          #   of `-a` and `--amend`.
 
-alias gl='git log'                       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
-alias glp='git log -p'                   # Show the history of commits, plus show the diff for each commit.
-alias glno='git log --name-only'         # Show the history of commits, plus show the filenames changed for each commit.
+# git-log aliases all use topological order so that commits are shown in the
+# order that they got merged into a branch, not the order in which they were
+# written.  Also, each command is aliased to use --no-merges by default, but
+# is accompanies by another alias with 'm' appended to include the merges.
+
+alias gl='git log --graph --date=short --no-merges'       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
+alias glm='git log --graph --date=short'
+
+alias glp='git log -p --topo-order -p --no-merges'        # Show the history of commits, plus show the diff for each commit.
+alias glpm='git log -p --topo-order'
+
+alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus show the filenames changed for each commit.
+alias glnom='git log --name-only --topo-order'
 
 alias gp='git pull --no-edit && git rebase' # First, pull changes from origin.  This is good, but a side effect is that an ugly "Merge" commit will
                                          #   get automatically generated.  So we then also rebase locally to get rid of that ugly "Merge" commit.
