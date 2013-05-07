@@ -6,6 +6,10 @@
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
 export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]$ "
 
+# Vi mode
+set -o vi
+bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi mode
+
 # Common aliases
 alias ls='ls -lG' # colors + always use the long format
 alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
