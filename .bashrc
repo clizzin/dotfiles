@@ -17,7 +17,11 @@ alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
 alias rc='bundle exec rails console'
-alias z='zeus'
+alias z='zeus start'
+alias zc='zeus console'
+alias zr='zeus rake'
+alias zs='zeus server'
+alias zt='zeus test'
 
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
