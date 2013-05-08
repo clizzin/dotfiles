@@ -74,6 +74,12 @@ alias glpm='git log -p --topo-order'
 alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus show the filenames changed for each commit.
 alias glnom='git log --name-only --topo-order'
 
+# git aliases for syncing local and remotes
+
+alias gfo='git fetch origin'
+alias gtfo='git fetch origin'
+alias grpo='git remote prune origin'
+
 alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, pull changes from origin.  This is good, but a side effect is that an
                                                                        #   ugly "Merge" commit will get automatically generated.  So we then also
                                                                        #   rebase locally to get rid of that ugly "Merge" commit.  Finally, prune any
