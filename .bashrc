@@ -24,6 +24,9 @@ alias z='zeus'
 # If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
+# Add Python executables to PATH.
+PATH=$PATH:/usr/local/share/python
+
 # Git aliases
 alias g='git'
 
