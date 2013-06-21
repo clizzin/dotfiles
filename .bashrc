@@ -37,7 +37,10 @@ PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=$PATH:/usr/local/share/python
 
 # Git aliases
+
 alias g='git'
+
+# Aliases for local development workflow
 
 alias gs='git status'                    # See a summary of which changes are staged for a commit (the top green section), which are modified
                                          #   on disk but not staged for a commit (the middle red section, "Changes not staged for commit"), and
@@ -69,6 +72,29 @@ alias gca='git commit --amend'           # Revise the last commit.  Useful if yo
 alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.  (Literally combines the effects
                                          #   of `-a` and `--amend`.
 
+alias gcp='git cherry-pick'
+
+# Aliases for undoing history
+
+alias gr='git reset'
+alias grh='git reset HEAD'
+alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
+                                         #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
+                                         #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
+                                         #  last commit, do `git reset --hard HEAD~1`.
+
+# Aliases for branch manipulation
+
+alias gb='git branch'                    # List your local branches.
+alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d branch-to-delete`.
+
+alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
+                                         #   with the files as they exist on that branch.
+alias gcom='git checkout master'         # Checkout the master branch.
+alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new branch will
+                                         #   "fork" off whatever the current commit is at the time you run `git checkout -b`.
+
+# Aliases for log commands
 # git-log aliases all use topological order so that commits are shown in the
 # order that they got merged into a branch, not the order in which they were
 # written.  Also, each command is aliased to use --no-merges by default, but
@@ -83,7 +109,7 @@ alias glpm='git log -p --topo-order'
 alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus show the filenames changed for each commit.
 alias glnom='git log --name-only --topo-order'
 
-# git aliases for syncing local and remotes
+# Aliases for syncing local and remotes
 
 alias gfo='git fetch origin'
 alias gtfo='git fetch origin'
@@ -94,25 +120,12 @@ alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, 
                                                                        #   rebase locally to get rid of that ugly "Merge" commit.  Finally, prune any
                                                                        #   origin branches that have been deleted at origin.
 
-alias gpom='git push origin master'      # Push to origin/master.  The most common case for pushing to origin.
-alias gpo='git push origin'              # Push to origin.  Use this with a branch name, e.g. `gpo my-branch`.
+alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for pushing to origin.
+alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name, e.g. `gpo my-branch`.
+alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-push the current branch to origin.  Very dangerous!  Use when you've
+                                                                       #   rebased your local history and want to force the remote to accept it.
 
-alias gb='git branch'                    # List your local branches.
-alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d branch-to-delete`.
 
-alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
-                                         #   with the files as they exist on that branch.
-alias gcom='git checkout master'         # Checkout the master branch.
-alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new branch will
-                                         #   "fork" off whatever the current commit is at the time you run `git checkout -b`.
-
-alias gr='git reset'
-alias grh='git reset HEAD'
-alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
-                                         #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
-                                         #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
-                                         #  last commit, do `git reset --hard HEAD~1`.
-alias gcp='git cherry-pick'
 
 export CODE_HOME=/Users/clizzin/code
 
