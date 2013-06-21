@@ -21,6 +21,11 @@ alias be='bundle exec'
 alias ber='bundle exec rake'
 alias rc='bundle exec rails console'
 alias z='zeus'
+alias z='zeus start'
+alias zc='zeus console'
+alias zr='zeus rake'
+alias zs='zeus server'
+alias zt='zeus test'
 eval "$(hub alias -s)" # alias git to hub
 
 # Prefer the GNU version of coreutils
