@@ -1,6 +1,9 @@
 # Git branch prompt completion
 . /usr/local/etc/bash_completion.d/git-completion.bash
 
+# Hub bash prompt completion
+. /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+
 # Bash prompt
 . /usr/local/etc/bash_completion.d/git-prompt.sh
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$ "
@@ -18,6 +21,7 @@ alias be='bundle exec'
 alias ber='bundle exec rake'
 alias rc='bundle exec rails console'
 alias z='zeus'
+eval "$(hub alias -s)" # alias git to hub
 
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
