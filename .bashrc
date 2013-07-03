@@ -57,23 +57,27 @@ alias gap='git add -p'                   # Add a file to the "stage," but instea
                                          #   different logical tasks, but only want to commit the changes related to one
                                          #   task.
 
-alias gd='git diff'                      # Show the diff between the last commit and the new changes that you have not yet `git add`-ed.
-                                         #   i.e. You know the middle red section of `git status` output?  `git diff` shows those changes.
-alias gdc='git diff --cached'            # Show the diff of what would be committed if you were to run `git commit` right now.
-                                         #   i.e. You know the top green section of `git status` output?  `git diff --cached` shows those changes.
+alias gd='git diff'                      # Show the diff between the last commit and the new changes that you have not yet
+                                         #   `git add`-ed.  i.e. You know the middle red section of `git status` output? 
+                                         #   `git diff` shows those changes.
+alias gdc='git diff --cached'            # Show the diff of what would be committed if you were to run `git commit` right
+                                         #   now.  i.e. You know the top green section of `git status` output?  `git diff
+                                         #   --cached` shows those changes.
 
 alias gc='git commit'
-alias gcm='git commit -m'                # Commit with a message, e.g. `git commit -m "Implemented a new feature."`.  The most common command you'll
-                                         #   use when committing.
-alias gcam='git commit -am'              # The `-a` flag automatically stages all changes (i.e. the middle red section of `git status` automatically
-                                         #   gets treated as if they were in the top green section).  Useful for when you quickly want to commit
-                                         #   all the changes you've made without having to `git add` every single file.  Also useful for when you've
-                                         #   deleted a file and want to commit that deletion.
-alias gca='git commit --amend'           # Revise the last commit.  Useful if you made a typo in the commit message.  If you made some extra changes
-                                         #   that should logically get lumped into the last commit, you can `git add -p` those changes and then run
-                                         #   `git commit --amend` to lump them into the last commit.
-alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.  (Literally combines the effects
-                                         #   of `-a` and `--amend`.
+alias gcm='git commit -m'                # Commit with a message, e.g. `git commit -m "Implemented a new feature."`.  The
+                                         #   most common command you'll use when committing.
+alias gcam='git commit -am'              # The `-a` flag automatically stages all changes (i.e. the middle red section of
+                                         #   `git status` automatically gets treated as if they were in the top green
+                                         #   section).  Useful for when you quickly want to commit all the changes you've
+                                         #   made without having to `git add` every single file.  Also useful for when
+                                         #   you've deleted a file and want to commit that deletion.
+alias gca='git commit --amend'           # Revise the last commit.  Useful if you made a typo in the commit message.  If
+                                         #   you made some extra changes that should logically get lumped into the last
+                                         #   commit, you can `git add -p` those changes and then run `git commit --amend`
+                                         #   to lump them into the last commit.
+alias gcaa='git commit -a --amend'       # Revise the last commit by automatically lumping all your new changes in.
+                                         #   (Literally combines the effects of `-a` and `--amend`.
 
 alias gcp='git cherry-pick'
 
