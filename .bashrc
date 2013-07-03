@@ -85,10 +85,11 @@ alias gcp='git cherry-pick'
 
 alias gr='git reset'
 alias grh='git reset HEAD'
-alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes of the last commit
-                                         #  on disk, they will just no longer have been committed; you will now see them in the list of unstaged
-                                         #  changes (i.e. the middle red secton of `git status`).  If you actually want to completely erase the
-                                         #  last commit, do `git reset --hard HEAD~1`.
+alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't happen.  This will still keep the changes
+                                         #   of the last commit on disk, they will just no longer have been committed; you
+                                         #   will now see them in the list of unstaged changes (i.e. the middle red section
+                                         #   of `git status`).  If you actually want to completely erase the last commit,
+                                         #   do `git reset --hard HEAD~1`.
 
 # Aliases for branch manipulation
 
@@ -125,15 +126,23 @@ alias gfo='git fetch origin'
 alias gtfo='git fetch origin'
 alias grpo='git remote prune origin'
 
-alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, pull changes from origin.  This is good, but a side effect is that an
-                                                                       #   ugly "Merge" commit will get automatically generated.  So we then also
-                                                                       #   rebase locally to get rid of that ugly "Merge" commit.  Finally, prune any
-                                                                       #   origin branches that have been deleted at origin.
+alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, pull changes from origin.  Use a merge
+                                                                       #   instead of a rebase so that the post-merge
+                                                                       #   hook will fire.
+                                                                       # Then, to get rid of the ugly "Merge" commit,
+                                                                       #   rebase locally against origin/master.
+                                                                       # Finally, prune any origin branches that have
+                                                                       #   been deleted at origin.
 
-alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for pushing to origin.
-alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name, e.g. `gpo my-branch`.
-alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-push the current branch to origin.  Very dangerous!  Use when you've
-                                                                       #   rebased your local history and want to force the remote to accept it.
+alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for
+                                                                       #   pushing to origin.
+alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name, e.g.
+                                                                       #   `gpo my-branch`.
+alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-push the current branch to origin.  Very
+                                                                       #   dangerous!  Use when you've rebased your local
+                                                                       #   history and want to force the remote to accept
+                                                                       #   the rewritten commits.  It's also a good idea
+                                                                       #   to `git config --global push.default current`.
 
 
 
