@@ -136,8 +136,8 @@ alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, 
 
 alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for
                                                                        #   pushing to origin.
-alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name, e.g.
-                                                                       #   `gpo my-branch`.
+alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name,
+                                                                       #   e.g. `gpo my-branch`.
 alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-push the current branch to origin.  Very
                                                                        #   dangerous!  Use when you've rebased your local
                                                                        #   history and want to force the remote to accept
