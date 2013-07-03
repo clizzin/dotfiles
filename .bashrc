@@ -42,17 +42,20 @@ alias g='git'
 
 # Aliases for local development workflow
 
-alias gs='git status'                    # See a summary of which changes are staged for a commit (the top green section), which are modified
-                                         #   on disk but not staged for a commit (the middle red section, "Changes not staged for commit"), and
-                                         #   which are not yet tracked by the repo and need to be `git add`-ed (the bottom red section, "Untracked
+alias gs='git status'                    # See a summary of which changes are staged for a commit (the top green section),
+                                         #   which are modified on disk but not staged for a commit (the middle red
+                                         #   section, "Changes not staged for commit"), and which are not yet tracked by
+                                         #   the repo and need to be `git add`-ed (the bottom red section, "Untracked
                                          #   files").
 
-alias ga='git add'                       # Add a file to the "stage" of changes that will be committed if you run `git commit` (i.e. move the file
-                                         #   from the middle/bottom red sections to the top green section).
-alias gap='git add -p'                   # Add a file to the "stage," but instead of adding the whole file at once, git will detect sections
-                                         #   of changes, and for each section, will ask you if you want to add it or not.  Useful for when
-                                         #   you've changed the same file for two different logical tasks, but only want to commit the changes
-                                         #   related to one task.
+alias ga='git add'                       # Add a file to the "stage" of changes that will be committed if you run `git
+                                         #   commit` (i.e. move the file from the middle/bottom red sections to the top
+                                         #   green section).
+alias gap='git add -p'                   # Add a file to the "stage," but instead of adding the whole file at once, git
+                                         #   will detect sections of changes, and for each section, will ask you if you
+                                         #   want to add it or not.  Useful for when you've changed the same file for two
+                                         #   different logical tasks, but only want to commit the changes related to one
+                                         #   task.
 
 alias gd='git diff'                      # Show the diff between the last commit and the new changes that you have not yet `git add`-ed.
                                          #   i.e. You know the middle red section of `git status` output?  `git diff` shows those changes.
