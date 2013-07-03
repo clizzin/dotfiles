@@ -88,11 +88,12 @@ alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't h
 alias gb='git branch'                    # List your local branches.
 alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d branch-to-delete`.
 
-alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the current files on disk
-                                         #   with the files as they exist on that branch.
+alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the
+                                         #   current files on disk with the files as they exist on that branch.
 alias gcom='git checkout master'         # Checkout the master branch.
-alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b new-branch`.  The new branch will
-                                         #   "fork" off whatever the current commit is at the time you run `git checkout -b`.
+alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b
+                                         #   new-branch`.  The new branch will "fork" off whatever the current commit is
+                                         #   at the time you run `git checkout -b`.
 
 # Aliases for log commands
 # git-log aliases all use topological order so that commits are shown in the
@@ -100,13 +101,15 @@ alias gcob='git checkout -b'             # Create a new branch and switch to it 
 # written.  Also, each command is aliased to use --no-merges by default, but
 # is accompanies by another alias with 'm' appended to include the merges.
 
-alias gl='git log --graph --date=short --no-merges'       # Show the history of commits.  This will open a `less` buffer, which you can use `q` to quit out of.
+alias gl='git log --graph --date=short --no-merges'       # Show the history of commits.  This will open a `less` buffer,
+                                                          #   which you can use `q` to quit out of.
 alias glm='git log --graph --date=short'
 
-alias glp='git log -p --topo-order -p --no-merges'        # Show the history of commits, plus show the diff for each commit.
+alias glp='git log -p --topo-order -p --no-merges'        # Show the history of commits, plus the diff for each commit.
 alias glpm='git log -p --topo-order'
 
-alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus show the filenames changed for each commit.
+alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus the filenames changed in
+                                                          #   each commit.
 alias glnom='git log --name-only --topo-order'
 
 # Aliases for syncing local and remotes
