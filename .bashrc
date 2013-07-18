@@ -144,5 +144,8 @@ alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-p
                                                                        #   the rewritten commits.  It's also a good idea
                                                                        #   to `git config --global push.default current`.
 
+# Aliases for GitHub features (via hub, to which git has been aliased)
+
+alias gpra='git pull-request -b airbnb:master -h airbnb:$(git rev-parse --abbrev-ref HEAD)'
 
 export CODE_HOME=/Users/clizzin/code
