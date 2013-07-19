@@ -96,6 +96,8 @@ alias grh1='git reset HEAD~1'            # Pretend like the last commit didn't h
 # Aliases for branch manipulation
 
 alias gb='git branch'                    # List your local branches.
+alias gbm='git branch --merged'          # List local branches that have already been merged into the current branch
+                                         #   (and are therefore safe to delete).
 alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d branch-to-delete`.
 
 alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the
