@@ -16,6 +16,11 @@ bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi m
 # Prefer Homebrew binaries to default Applie-supplied binaries.
 PATH=/usr/local/bin:$PATH
 
+# Prefer the GNU version of coreutils
+# This assumes you have installed the GNU version of the coreutils
+# If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
 # Common aliases
 alias ls='ls -lG' # colors + always use the long format
 alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
@@ -30,11 +35,6 @@ alias zr='zeus rake'
 alias zs='zeus server'
 alias zt='zeus test'
 eval "$(hub alias -s)" # alias git to hub
-
-# Prefer the GNU version of coreutils
-# This assumes you have installed the GNU version of the coreutils
-# If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Add Python executables to PATH.
 PATH=$PATH:/usr/local/share/python
