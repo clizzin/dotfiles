@@ -1,0 +1,12 @@
+# ` for escape key.
+escape ``
+
+# Pretty status string.
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+# Super long scrollback.
+defscrollback 25000
+
+# Wipe buffers for programs like less and man from the screen after they're closed.
+altscreen on
