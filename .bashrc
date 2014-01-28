@@ -6,7 +6,7 @@
 
 # Bash prompt
 . /usr/local/etc/bash_completion.d/git-prompt.sh
-export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]$ "
+export PS1="\[\033[01;32m\]\d \t \w\$(__git_ps1) \[\033[00m\]\n$ "
 
 # Vi mode
 set -o vi
