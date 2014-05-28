@@ -111,6 +111,9 @@ alias gcob='git checkout -b'             # Create a new branch and switch to it 
                                          #   new-branch`.  The new branch will "fork" off whatever the current commit is
                                          #   at the time you run `git checkout -b`.
 
+# Delete branches that have already been merged into the current branch.
+alias gbmd='git branch --merged | grep -v \* | grep -v master | xargs git branch -d'
+
 # Aliases for log commands
 # git-log aliases all use topological order so that commits are shown in the
 # order that they got merged into a branch, not the order in which they were
