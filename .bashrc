@@ -114,6 +114,10 @@ alias gcob='git checkout -b'             # Create a new branch and switch to it 
 # Delete branches that have already been merged into the current branch.
 alias gbmd='git branch --merged | grep -v \* | grep -v master | xargs git branch -d'
 
+# Aliases for rebase workflows
+
+alias grc='git rebase --continue'
+
 # Aliases for log commands
 # git-log aliases all use topological order so that commits are shown in the
 # order that they got merged into a branch, not the order in which they were
