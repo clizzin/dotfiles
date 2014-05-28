@@ -124,16 +124,16 @@ alias grc='git rebase --continue'
 # written.  Also, each command is aliased to use --no-merges by default, but
 # is accompanies by another alias with 'm' appended to include the merges.
 
-alias gl='git log --graph --date=short --no-merges'       # Show the history of commits.  This will open a `less` buffer,
-                                                          #   which you can use `q` to quit out of.
-alias glm='git log --graph --date=short'
+alias gl='git log --date=local --topo-order --no-merges'               # Show the history of commits.  This will open a `less` buffer,
+                                                                       #   which you can use `q` to quit out of.
+alias glm='git log --date=local --graph'
 
-alias glp='git log -p --topo-order -p --no-merges'        # Show the history of commits, plus the diff for each commit.
-alias glpm='git log -p --topo-order'
+alias glp='git log -p --date=local --topo-order -p --no-merges'        # Show the history of commits, plus the diff for each commit.
+alias glpm='git log -p --date=local --topo-order'
 
-alias glno='git log --name-only --topo-order --no-merges' # Show the history of commits, plus the filenames changed in
-                                                          #   each commit.
-alias glnom='git log --name-only --topo-order'
+alias glno='git log --date=local --name-only --topo-order --no-merges' # Show the history of commits, plus the filenames changed in
+                                                                       #   each commit.
+alias glnom='git log --date=local --name-only --topo-order'
 
 # Aliases for syncing local and remotes
 
