@@ -141,13 +141,14 @@ alias gfo='git fetch origin'
 alias gtfo='git fetch origin'
 alias grpo='git remote prune origin'
 
-alias gp='git pull --no-edit && git rebase && git remote prune origin' # First, pull changes from origin.  Use a merge
-                                                                       #   instead of a rebase so that the post-merge
-                                                                       #   hook will fire.
-                                                                       # Then, to get rid of the ugly "Merge" commit,
-                                                                       #   rebase locally against origin/master.
-                                                                       # Finally, prune any origin branches that have
-                                                                       #   been deleted at origin.
+alias gp='git pull --no-edit && git rebase && git remote prune origin && gbmd' # First, pull changes from origin.  Use a merge
+                                                                               #   instead of a rebase so that the post-merge
+                                                                               #   hook will fire.
+                                                                               # Then, to get rid of the ugly "Merge" commit,
+                                                                               #   rebase locally against origin/master.
+                                                                               # Then, prune any origin branches that have
+                                                                               #   been deleted at origin.
+                                                                               # Then, prune any local branches that have been merged.
 
 alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for
                                                                        #   pushing to origin.
