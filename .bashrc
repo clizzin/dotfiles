@@ -116,6 +116,10 @@ alias gbmd='git branch --merged | grep -v \* | grep -v master | xargs git branch
 
 # Aliases for rebase workflows
 
+function gri {
+  git rebase -i HEAD~${1:-1}
+}
+
 alias grc='git rebase --continue'
 
 # Aliases for log commands
