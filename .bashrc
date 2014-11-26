@@ -112,7 +112,7 @@ alias gcob='git checkout -b'             # Create a new branch and switch to it 
                                          #   at the time you run `git checkout -b`.
 
 # Delete branches that have already been merged into the current branch.
-alias gbmd='git branch --merged | grep -v \* | grep -v master | xargs git branch -d'
+alias gbmd='git branch --merged | grep -v \* | grep -v "^\s*master$" | xargs git branch -d'
 
 # Aliases for rebase workflows
 
