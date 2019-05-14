@@ -28,6 +28,7 @@ alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show 
 alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
+alias dus='du -a -h --max-depth=1 | sort -hr' # list all files/directories, sorted by human-readable size
 alias rc='bundle exec rails console'
 alias v='vagrant'
 alias vp='vagrant provision'
