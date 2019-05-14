@@ -15,6 +15,9 @@ bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi m
 # Prefer Homebrew binaries to default Applie-supplied binaries.
 PATH=/usr/local/bin:$PATH
 
+# Prefer rbenv's Ruby PATH to others.
+eval "$(rbenv init -)"
+
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
 # If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
