@@ -24,7 +24,6 @@ eval "$(rbenv init -)"
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Common aliases
-alias ls='ls -lG' # colors + always use the long format
 alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
 alias vless=/usr/share/vim/vim73/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
