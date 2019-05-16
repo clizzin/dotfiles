@@ -18,6 +18,14 @@ PATH=/usr/local/bin:$PATH
 # Prefer rbenv's Ruby PATH to others.
 eval "$(rbenv init -)"
 
+# Prefer pyenv's Pythons to others.
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+if command -v pyenv 1>/dev/null 2>&1
+then
+  eval "$(pyenv init -)"
+  pyenv virtualenvwrapper
+fi
+
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
 # If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
