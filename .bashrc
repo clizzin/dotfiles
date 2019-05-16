@@ -177,8 +177,6 @@ alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-p
 
 # Aliases for GitHub features (via hub, to which git has been aliased)
 
-function gpra() {
-  git pull-request -b airbnb:${1:-master} -h airbnb:$(git rev-parse --abbrev-ref HEAD)
-}
+alias gpr='git pull-request'
 
 export CODE_HOME=/Users/clizzin/code
