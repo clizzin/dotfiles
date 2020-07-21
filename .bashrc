@@ -15,16 +15,9 @@ bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi m
 # Prefer Homebrew binaries to default Applie-supplied binaries.
 PATH=/usr/local/bin:$PATH
 
-# Prefer rbenv's Ruby PATH to others.
+# Prefer non-system Python and Ruby installation.
 eval "$(rbenv init -)"
-
-# Prefer pyenv's Pythons to others.
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-if command -v pyenv 1>/dev/null 2>&1
-then
-  eval "$(pyenv init -)"
-  pyenv virtualenvwrapper
-fi
+eval "$(pyenv init -)"
 
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
