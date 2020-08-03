@@ -91,6 +91,9 @@ alias gcaa='git commit -a --amend'       # Revise the last commit by automatical
 
 alias gcp='git cherry-pick'
 
+alias gm='git merge'
+alias gmm='git merge master'
+
 # Aliases for undoing history
 
 alias gr='git reset'
