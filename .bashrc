@@ -15,6 +15,9 @@ bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi m
 # Prefer Homebrew binaries to default Applie-supplied binaries.
 PATH=/usr/local/bin:$PATH
 
+# ruby-build suggests adding this to build against Homebrew OpenSSL, which gets upgrades
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 # Prefer non-system Python and Ruby installation.
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
