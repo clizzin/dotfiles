@@ -1,0 +1,89 @@
+/* userChrome.css
+ * --------------
+ * To use this in your Firefox installation, follow the instructions in this
+ * post up through "create or edit the userChrome.css."
+ * https://medium.com/@Aenon/firefox-hide-native-tabs-and-titlebar-f0b00bdbb88b
+ *
+
+/******************************************************************************
+ *
+ * HIDE TAB BAR
+ *
+ * https://medium.com/@Aenon/firefox-hide-native-tabs-and-titlebar-f0b00bdbb88b
+ * https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules#for-userchromecss
+ *
+ *****************************************************************************/
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+#TabsToolbar {
+  visibility: collapse;
+}
+#titlebar {
+  visibility: collapse;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/******************************************************************************
+ *
+ * IN FULL SCREEN, HIDE ADDRESS BAR / NAVIGATION BAR
+ *
+ * https://support.mozilla.org/en-US/questions/1265173
+ *
+ *****************************************************************************/
+
+#navigator-toolbox[inFullscreen] {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    margin-bottom: -3px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#navigator-toolbox[inFullscreen]:hover {
+    height: auto;
+    margin-bottom: 0px;
+    opacity: 1;
+    overflow: show;
+}
+
+#content-deck[inFullscreen]{
+    position:relative;
+    z-index: 0;
+}
+
+/******************************************************************************
+ *
+ * HIDE NAVIGATION BAR, SHOW ON HOVER
+ *
+ * https://superuser.com/questions/1268860/firefox-quantum-57-how-to-toggle-all-toolbars-with-a-keyboard-shortcut-li
+ *
+ *****************************************************************************/
+
+/*
+#navigator-toolbox {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    margin-bottom: -3px;
+    overflow: hidden;
+    transition-property: height;
+    transition-delay: 1s;
+    transition-duration: 2s;
+}
+
+#navigator-toolbox:hover {
+    height: 62px;
+    transition-property: height;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+}
+*/
