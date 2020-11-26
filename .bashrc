@@ -16,7 +16,8 @@ bind -m vi-insert "\C-l":clear-screen # Make Ctrl-L to clear screen work in Vi m
 PATH=/usr/local/bin:$PATH
 
 # ruby-build suggests adding this to build against Homebrew OpenSSL, which gets upgrades
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
+#export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # Prefer non-system Python and Ruby installation.
 eval "$(rbenv init -)"
@@ -25,7 +26,8 @@ eval "$(pyenv init -)"
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
 # If you haven't done that yet, you can install via Homebrew: `brew install coreutils`
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Common aliases
 alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
