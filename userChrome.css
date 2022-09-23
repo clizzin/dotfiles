@@ -87,3 +87,22 @@
     transition-delay: 0s;
 }
 */
+
+/******************************************************************************
+ *
+ * ONLY SHOW DOMAIN OF URL IN ADDRESS BAR
+ *
+ * https://www.reddit.com/r/FirefoxCSS/comments/mfnjae/how_do_i_hide_the_httpswww_part_of_a_url/gsop5dd/
+ *
+ *****************************************************************************/
+
+#urlbar{
+  color: rgb(170,170,170) !important;
+  background-color: rgb(0,0,0) !important;
+  filter: contrast(2.1)
+}
+
+#urlbar-background{
+  background: rgb(84,84,84) !important;
+  border: none !important;
+}
