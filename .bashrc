@@ -31,7 +31,7 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Common aliases
 alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
-alias vless=/usr/share/vim/vim81/macros/less.sh # less with syntax highlighting
+alias vless=/usr/share/vim/vim82/macros/less.sh # less with syntax highlighting
 alias be='bundle exec'
 alias ber='bundle exec rake'
 alias dus='du -a -h --max-depth=1 | sort -hr' # list all files/directories, sorted by human-readable size
