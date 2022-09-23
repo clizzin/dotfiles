@@ -19,9 +19,10 @@ PATH=/usr/local/bin:$PATH
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 #export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-# Prefer non-system Python and Ruby installation.
+# Prefer non-system installations for Python, Ruby, and Node.
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+eval "$(nodenv init -)"
 
 # Prefer the GNU version of coreutils
 # This assumes you have installed the GNU version of the coreutils
