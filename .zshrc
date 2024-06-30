@@ -10,3 +10,6 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+# Vi mode
+bindkey -v
