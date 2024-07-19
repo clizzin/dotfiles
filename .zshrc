@@ -144,3 +144,8 @@ alias gpfo='git push -f origin $(git rev-parse --abbrev-ref HEAD)'     # Force-p
 # Aliases for GitHub features (via hub, to which git has been aliased)
 
 alias gpr='git pull-request'
+
+# postgresql 16
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/postgresql@16/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@16/include"
