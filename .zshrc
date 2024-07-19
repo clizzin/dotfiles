@@ -62,7 +62,7 @@ alias gcaa='git commit -a --amend'       # Revise the last commit by automatical
 alias gcp='git cherry-pick'
 
 alias gm='git merge'
-alias gmm='git merge master'
+alias gmm='git merge main'
 
 # Aliases for undoing history
 
@@ -83,13 +83,13 @@ alias gbd='git branch -d'                # Delete a branch, e.g. `git branch -d 
 
 alias gco='git checkout'                 # Checkout a branch, e.g. `git checkout other-branch`.  This will replace the
                                          #   current files on disk with the files as they exist on that branch.
-alias gcom='git checkout master'         # Checkout the master branch.
+alias gcom='git checkout main'           # Checkout the main branch.
 alias gcob='git checkout -b'             # Create a new branch and switch to it immediately, e.g. `git checkout -b
                                          #   new-branch`.  The new branch will "fork" off whatever the current commit is
                                          #   at the time you run `git checkout -b`.
 
 # Delete branches that have already been merged into the current branch.
-alias gbmd='git branch --merged | grep -v \* | grep -v "^\s*master$" | xargs git branch -d'
+alias gbmd='git branch --merged | grep -v \* | grep -v "^\s*main$" | xargs git branch -d'
 
 # Aliases for rebase workflows
 
@@ -126,12 +126,12 @@ alias gp='git pull --no-edit && git rebase && git remote prune origin && gbmd' #
                                                                                #   instead of a rebase so that the post-merge
                                                                                #   hook will fire.
                                                                                # Then, to get rid of the ugly "Merge" commit,
-                                                                               #   rebase locally against origin/master.
+                                                                               #   rebase locally against origin/main.
                                                                                # Then, prune any origin branches that have
                                                                                #   been deleted at origin.
                                                                                # Then, prune any local branches that have been merged.
 
-alias gpom='git push origin master'                                    # Push to origin/master.  The most common case for
+alias gpom='git push origin main'                                      # Push to origin/main.  The most common case for
                                                                        #   pushing to origin.
 alias gpo='git push origin'                                            # Push to origin.  Use this with a branch name,
                                                                        #   e.g. `gpo my-branch`.
