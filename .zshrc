@@ -17,6 +17,10 @@ fi
 # Vi mode
 bindkey -v
 
+# Common aliases
+alias less='less -R' # respect ANSI color escape sequences (i.e. correctly show colorized output)
+alias vless=/usr/share/vim/vim91/macros/less.sh # less with syntax highlighting
+
 # Git aliases
 
 alias git='TZ=UTC0 git'
