@@ -1,6 +1,9 @@
 # Use asdf shims
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
+# Use rv for Ruby
+eval "$(rv shell init zsh)"
+
 # Homebrew shell completion
 # https://docs.brew.sh/Shell-Completion
 if type brew &>/dev/null
